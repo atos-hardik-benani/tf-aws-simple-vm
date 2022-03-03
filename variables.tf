@@ -7,7 +7,7 @@ variable "instance_type" {
 variable "subnet_name" {
   description = "VPC Subnet Name to launch in."
   type        = string
-  default     = "SUB-USWST2-RPS-RPS1"
+  default     = ""
 }
 
 variable "volume_size" {
@@ -26,13 +26,13 @@ variable "volume_type" {
 variable "request_it" {
   description = "Internal request_it number"
   type        = string
-  default     = "I0026089"
+  default     = ""
 }
 
 variable "cost_center" {
   description = "Internal cost center id used for billing purposes"
   type        = string
-  default     = "842"
+  default     = ""
 }
 
 variable "created_by_email" {
@@ -50,4 +50,13 @@ variable "key_pair_name" {
 variable "ssh_public_key" {
   description = "Key pair's public key will be registered with AWS to allow logging-in to EC2 instances."
   default     = ""
+}
+
+variable "region" {
+}
+
+variable "access_key" {
+}
+
+variable "secret_key" {
 }
