@@ -1,13 +1,13 @@
 # EC2 instance, using the subnet provided
 resource "aws_instance" "this_instance" {
-  ami                         = data.aws_ami.app_ami.id
+  ami                         = "ami-08c474c58294b7543"
   instance_type               = lower(var.instance_type)
-  subnet_id                   = data.aws_subnet.this_subnet.id
+  subnet_id                   = "subnet-0fc0136542949e3b6"
   associate_public_ip_address = false
   key_name                    = var.key_pair_name
 
   tags = {
-    Name             = "instance_workspace_${substr("${terraform.workspace}", 4, -1)}"
+    Name             = "atosdhc-servicenow"
     Created_By_Email = var.created_by_email
   }
 
